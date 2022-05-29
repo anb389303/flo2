@@ -178,25 +178,7 @@
     gameOver: {
       create: function() {
         
-       if(gameOver){
-          if(!highScore){
-/*
-            // get address from User Input
-            var address = prompt("Please enter your ETH address", "");
-            if(address == null || address == ""){
-              alert("User cancelled the prompt");
-            }
-            else{
-              mintAfterGame(address, score);
-            }
-*/
-            //get address from Metamask
-            mintAfterGame(score);
-
-            highScore = true;
-          }
-          return;
-        };
+       
         
         
         this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
@@ -226,3 +208,5 @@
   };
   SantaGame.init();
 })();
+ // definiton of Game with whole config
+      var game = new Phaser.Game(config);
