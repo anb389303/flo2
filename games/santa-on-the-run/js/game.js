@@ -178,7 +178,26 @@
     gameOver: {
       create: function() {
         
-        mintAfterGame(score); 
+       if(gameOver){
+          if(!coinsSent){
+/*
+            // get address from User Input
+            var address = prompt("Please enter your ETH address", "");
+            if(address == null || address == ""){
+              alert("User cancelled the prompt");
+            }
+            else{
+              mintAfterGame(address, score);
+            }
+*/
+            //get address from Metamask
+            mintAfterGame(score);
+
+            coinsSent = true;
+          }
+          return;
+        };
+        
         
         this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
         this.msg = this.game.add.sprite(this.game.world.width / 2 - 280.5, 50, 'game-over');
