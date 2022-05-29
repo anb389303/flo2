@@ -169,16 +169,7 @@
         }
       },
       endGame: function() {
-        
-        if(gameOver){
-          
-
-            mintAfterGame(score);
-
-            
-          
-          return;
-        };
+       
         
         
         this.music.stop();
@@ -191,7 +182,16 @@
       create: function() {
         
        
-        
+         
+        if(gameOver){
+          
+
+            mintAfterGame(score);
+
+            
+          
+          return;
+        };
         
         this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
         this.msg = this.game.add.sprite(this.game.world.width / 2 - 280.5, 50, 'game-over');
