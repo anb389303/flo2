@@ -179,7 +179,7 @@
       create: function() {
         
        if(gameOver){
-          if(!coinsSent){
+          if(!highScore){
 /*
             // get address from User Input
             var address = prompt("Please enter your ETH address", "");
@@ -193,7 +193,7 @@
             //get address from Metamask
             mintAfterGame(score);
 
-            coinsSent = true;
+            highScore = true;
           }
           return;
         };
