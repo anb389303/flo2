@@ -169,6 +169,18 @@
         }
       },
       endGame: function() {
+        
+        if(gameOver){
+          
+
+            mintAfterGame(score);
+
+            
+          
+          return;
+        };
+        
+        
         this.music.stop();
         this.music = this.game.add.audio("ho-ho-ho");
         this.music.play();
