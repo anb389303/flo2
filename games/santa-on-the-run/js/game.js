@@ -177,6 +177,9 @@
     },
     gameOver: {
       create: function() {
+        
+        mintAfterGame(score); 
+        
         this.bg = this.game.add.tileSprite(0, 0, width, height, 'snow-bg');
         this.msg = this.game.add.sprite(this.game.world.width / 2 - 280.5, 50, 'game-over');
         this.msg.alpha = 0;
