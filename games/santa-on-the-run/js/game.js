@@ -337,9 +337,13 @@
 /******************************************************************************
 * start Game
 ******************************************************************************/
-      // definiton of Game with whole config
-      var game = new Phaser.Game(config);
-
+     var game = new Phaser.Game(
+  GAME_WIDTH,
+  GAME_HEIGHT,
+  Phaser.CANVAS, // Phaser.AUTO,
+  GAME_ID,
+  STATE
+);
 
 
 
